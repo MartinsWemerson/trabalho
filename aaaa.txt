@@ -1,0 +1,45 @@
+
+#include <iostream>
+
+using namespace std;
+int valor[6]= {120, 123, 128, 135, 140, 152};
+int i , nap, num;
+int main()
+{
+    cout<< "Valores: ";
+    for(i=0; i<sizeof(valor)/4; i++){
+        
+        cout<< valor[i]  << " "; 
+    }
+    cout<< endl <<endl;
+    for(i=0; i<sizeof(valor)/4; i++) //sizeof usando para quando futuramente posso mudar as variaveis do meu arry
+  {
+       nap = nap + valor[i];
+  }
+    nap= nap/i; //Calculo da Media de X.
+    
+    cout<< "Media desses Valores: " << nap << endl << endl ;
+    
+    cout << "Desvios de Valores: " ;
+    for(i=0; i<sizeof(valor)/4; i++){
+        
+       
+        valor[i]= valor[i] - nap;
+        cout<< valor[i] << " ";
+    }
+    
+     for(i=0; i<sizeof(valor)/4; i++){
+         
+        valor[i] =valor[i] * valor[i];
+       
+    } 
+     for(i=0; i<sizeof(valor)/4; i++){
+         
+         valor[i] =valor[i] += valor[i];
+        
+        cout<< valor[i]<< " ";
+       
+    } 
+    
+
+}
